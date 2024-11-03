@@ -133,5 +133,5 @@ STATICFILES_DIRS = [
 
 LOGIN_URL = '/login/'
 
-ALLOWED_HOSTS = ['*.vercel.app']
+# ALLOWED_HOSTS = ['*.vercel.app']
 
