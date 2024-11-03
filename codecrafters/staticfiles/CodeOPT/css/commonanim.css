@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    font-family: "Brush Script MT(cursive)";
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #222;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+    z-index: 2; /* Ensure header is above the wavey fingerprint */
+}
+
+main {
+    z-index: 1; /* Ensure main content is above the wavey fingerprint */
+}
+
+@keyframes animm {
+    100% {
+        transform: translate(-50vw, -55vh) scale(1, 1.1);
+    }
+}
+
+.animm {
+    
+    position: fixed;
+    top: 30%;
+    left: 0; 
+    width: 3000px;
+    transform: translate(0%, -55%);
+    animation: animm 15s infinite alternate linear;  
+}
