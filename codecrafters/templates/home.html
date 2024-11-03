@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head_styles %}
+    <link rel="stylesheet" href="{% static 'CodeOPT/css/headerstyle.css' %}">
+    <link rel="stylesheet" href="{% static 'CodeOPT/css/homestyle.css' %}">
+    <link rel="stylesheet" href="{% static 'CodeOPT/css/footerstyle.css' %}">
+{% endblock %}
+
+{% block header_content %}
+<nav class="navbar">
+    <a href="{% url 'home' %}">Home</a>
+    <a href="{% url 'about' %}">About Us</a>
+    <a href="{% url 'study' %}">Study Material</a>
+    <a href="{% url 'expert' %}">Expert Implementation</a>
+    <div class="search-bar">
+        <i class="uil uil-search"></i>
+        <input type="text" placeholder="Search">
+    </div>
+</nav>
+{% endblock %}
+
+{% block main_content %}
+<div id="CO_box">
+    <div id="CO">
+        <div id="text-container">
+            <div id="text">CODE.OPT</div>
+        </div>
+        <div class="button_box">
+            <a href="{% url 'login' %}">
+                <button class="button" id="button-1"> Login </button>
+            </a>
+            <a href="{% url 'signup' %}">
+                <button class="button" id="button-2"> Sign Up</button>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block footer_content %}
+
+<section class="top">
+    <img src="{% static 'CodeOPT/images/logo.png' %}" alt="Logo">
+    <ul>
+        <li>
+            <h3>Resources</h3>
+            <a>Usage</a>
+            <a>Docs</a>
+            <a>Support</a>
+            <a>Hardware</a>
+        </li>
+        <li>
+            <h3>Pricing</h3>
+            <a>Schemes details</a>
+            <a>Expert Plan</a>
+            <a>Monthly Plan</a>
+            <a>Yearly Plan</a>
+        </li>
+        <li>
+            <h3>Developers</h3>
+            <a>Linked In</a>
+            <a>Social Media Handle</a>
+            <a>Gmail</a>
+            <a>Contact No.</a>
+        </li>
+        <li>
+            <h3>Company</h3>
+            <a>About Us</a>
+            <a>Team Memebers</a>
+            <!-- Add more links as needed -->
+        </li>
+    </ul>
+</section>
+
+<section class="bottom">© Code Crafters</section>
+
+{% endblock %}

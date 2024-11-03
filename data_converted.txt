@@ -1,0 +1,9 @@
+{% for  x in range(1,6): %}
+{% if  x == 4: %}
+{{x}}
+{% elif  x == 1: %}
+{{x+9}}
+{% else  : %}
+{# This is the 'else' block. You can add more HTML or logic here if needed. #}
+{% endif %}
+{% endfor %}

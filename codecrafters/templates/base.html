@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% block title %}CodeOPT{% endblock %}</title>
+    
+    <link rel="stylesheet" href="{% static 'CodeOPT/css/commonanim.css' %}">
+    <link rel="stylesheet" href="{% static 'CodeOPT/css/footerstyle.css' %}">
+    
+    {% block head_styles %}{% endblock %}
+</head>
+<body>
+    <header>
+        {% block header_content %}{% endblock %}
+    </header>
+    
+    <main>
+        {% block main_content %}{% endblock %}
+    </main>
+
+    <footer>
+        {% block footer_content %}{% endblock %}
+    </footer>
+
+    <img class="animm" src="{% static 'CodeOPT/images/confetti-doodles.svg' %}">
+</body>
+</html>

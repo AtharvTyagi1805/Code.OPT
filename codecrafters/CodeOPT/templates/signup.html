@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Atharv">
+    <title>Dopthon_signup</title>
+    <link
+      rel="stylesheet"
+      href="{% static 'CodeOPT/css/signupstyle.css' %}"
+    />
+    <link rel="stylesheet" href="codecrafters\CodeOPT\static\CodeOPT\css\signupstyle.css" />
+  </head>
+  <body>
+    <h2>Sign Up</h2>
+    <form method="post" action="{% url 'signup' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Sign Up</button>
+    </form>
+  </body>
+</html>

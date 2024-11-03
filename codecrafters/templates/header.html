@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Header Page{% endblock %}
+
+{% block head_styles %}
+    <link rel="stylesheet" href="{% static 'CodeOPT/css/headerstyle.css' %}">
+{% endblock %}
+
+{% block header_content %}
+<nav class="navbar">
+    <a href="#">Home</a>
+    <a href="#">About Us</a>
+    <a href="#">Study Material</a>
+    <a href="{% url 'expert' %}">Expert Implementation</a>
+    <div class="search-bar">
+        <i class="uil uil-search"></i>
+        <input type="text" placeholder="Search">
+    </div>
+</nav>
+{% endblock %}
+
+

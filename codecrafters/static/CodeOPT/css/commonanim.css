@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    margin: 0;
+    padding: 0 20px;
+    background: #5d646b;
+    font-family: "Brush Script MT(cursive)";
+}
+
+@keyframes animm {
+    100% {
+        transform: translate(-50vw, -55vh) scale(1, 1.1);
+    }
+}
+
+.animm {
+    position: fixed;
+    top: 30%;
+    left: 0; 
+    width: 3000px;
+    transform: translate(0%, -55%);
+    animation: animm 15s infinite alternate linear;  
+}

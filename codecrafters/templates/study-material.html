@@ -1,0 +1,148 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head_styles %}
+    <link rel="stylesheet" href="{% static 'CodeOPT/css/headerstyle.css' %}">
+    <link rel="stylesheet" href="{% static 'CodeOPT/css/studystyle.css' %}">
+{% endblock %}
+
+{% block header_content %}
+<nav class="navbar">
+    <a href="{% url 'home' %}">Home</a>
+    <a href="{% url 'about' %}">About Us</a>
+    <a href="{% url 'study' %}">Study Material</a>
+    <a href="{% url 'expert' %}">Expert Implementation</a>
+    <div class="search-bar">
+        <i class="uil uil-search"></i>
+        <input type="text" placeholder="Search">
+    </div>
+</nav>
+{% endblock %}
+
+{% block main_content %}
+<div class="content-container">
+    <h1>Django Notes</h1>
+    <p>
+        Becoming proficient in Django, a high-level Python web framework, requires a combination of theoretical understanding and hands-on experience. Below are comprehensive notes that cover the key concepts and practices to help you become a Django pro from scratch. This guide assumes you have a basic understanding of Python.
+
+        Table of Contents
+        Introduction to Django
+
+        What is Django?
+        Why use Django?
+        MVC vs. MTV architecture
+        Setting Up Your Development Environment
+
+        Installing Python and pip
+        Creating a virtual environment
+        Installing Django
+        Setting up a new Django project and app
+        Understanding the Django Project Structure
+
+        Project vs. App
+        Key files and directories (settings, urls, views, models, templates, static)
+        Django Models
+
+        Defining models and fields
+        Migrations
+        Admin interface
+        Django Views and Templates
+
+        Function-based views vs. class-based views
+        URL patterns
+        Rendering templates
+        Template language (variables, tags, filters)
+        Django Forms
+
+        Building forms
+        Validation
+        Form classes
+        Form handling in views
+        Django ORM (Object-Relational Mapping)
+
+        Querysets
+        Filters and annotations
+        Aggregations
+        Relationships (OneToOne, ForeignKey, ManyToMany)
+        Authentication and Authorization
+
+        User authentication
+        Custom user models
+        Permissions and groups
+        Login and logout views
+        Django Middleware
+
+        Understanding middleware
+        Creating custom middleware
+        Common middleware classes
+        Django Rest Framework (DRF)
+
+        Introduction to REST
+        Setting up DRF
+        Serializers and views
+        Authentication and permissions in DRF
+        Testing in Django
+
+        Writing and running tests
+        TestCase vs. APITestCase
+        Testing views, models, and forms
+        Django Signals
+
+        Understanding signals
+        Implementing signals for decoupled applications
+        Django and Frontend Frameworks
+
+        Integrating Django with JavaScript frameworks (React, Vue, Angular)
+        Using Django REST Framework with frontend frameworks
+        Django Deployment
+
+        Preparing for deployment
+        Choosing a hosting platform (Heroku, AWS, DigitalOcean)
+        Configuring production settings
+        Deploying your Django application
+        Django Best Practices
+
+        Code organization
+        Optimizing database queries
+        Security best practices
+        Debugging and logging
+        Continuous Integration and Deployment (CI/CD) for Django
+
+        Setting up CI/CD pipelines
+        Automating testing and deployment
+        Django Tips and Tricks
+
+        Django Debug Toolbar
+        Django Extensions
+        Performance optimization techniques
+        Community and Resources
+
+        Django documentation
+        Official Django website
+        Django community and forums
+        Next Steps
+
+        Advanced topics (custom middleware, custom template tags)
+        Contributing to Django
+        Exploring other Django packages and extensions
+        Additional Resources:
+        Django Documentation
+        Django REST Framework Documentation
+        Books: "Two Scoops of Django" by Daniel Greenfeld and Audrey Roy Greenfeld, "Django for Beginners" by William S. Vincent
+        Online tutorials and courses on platforms like Django for Beginners, Real Python, and Django Girls.
+        Remember, becoming proficient in Django is an iterative process. Practice building real-world applications, contribute to open-source projects, and stay updated with the latest advancements in the Django ecosystem.
+    </p>
+
+
+
+
+
+    <style>
+        .content-container {
+            max-height: 500px; /* Set a max height for scrollability */
+            overflow-y: auto; /* Enable vertical scrolling */
+            padding: 20px; /* Optional: Add padding for better appearance */
+        }
+    </style>
+</div>
+{% endblock %}
