@@ -5,20 +5,9 @@
       "src": "codecrafters/wsgi.py",
       "use": "@vercel/python",
       "config": { "maxLambdaSize": "15mb", "runtime": "python3.11.9" }
-    },
-    {
-      "src": "build_files.sh",
-      "vercel": "@vercel/static-build",
-      "config": {
-        "distDir": "staticfiles_build"
-      }
     }
   ],
   "routes": [
-    {
-      "src": "/static/(.*)",
-      "dest": "/static/$1"
-    },
     {
       "src": "/(.*)",
       "dest": "codecrafters/wsgi.py"
